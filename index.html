@@ -107,6 +107,7 @@ header.scrolled .nav-logo img{height:38px}
 .zz-row.right .zz-text{order:1}
 .zz-media{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:var(--shadow);aspect-ratio:16/10}
 .zz-media video{width:100%;height:100%;object-fit:cover;display:block}
+.zz-media.portrait{aspect-ratio:3/4;max-width:400px;margin:0 auto;width:100%}
 .zz-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:radial-gradient(circle at 50% 40%,var(--panel2),var(--ink));color:var(--muted);text-align:center;padding:20px}
 .zz-ph svg{width:46px;height:46px;color:var(--brand)}
 .zz-ph b{color:var(--text);font-family:'Barlow',sans-serif;font-size:1.05rem}
@@ -487,19 +488,49 @@ var IMAGES = {"a3":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGB
 document.querySelectorAll('[data-img]').forEach(function(el){var k=el.getAttribute('data-img'); if(IMAGES[k]) el.src=IMAGES[k];});
 document.querySelectorAll('[data-bg]').forEach(function(el){var k=el.getAttribute('data-bg'); if(IMAGES[k]) el.style.backgroundImage="url('"+IMAGES[k]+"')";});
 
-// ---- VIDEO MAP (empty in Batch 1; drop base64 data URIs here later) ----
-// hero  -> replaces the hero photo slider
+// ---- VIDEO MAP ----
+// hero  -> array = videos crossfade into each other in sequence; string = single looping video
 // t1,t2,t3... -> before/after transformation slots (keys match data-vid on .zz-media)
 var VIDEOS = {
-  // hero: "data:video/mp4;base64,....",
-  // t1: "data:video/mp4;base64,....",
+  hero: ["hero-1.mp4","hero-2.mp4"],
+  t1: "transform-1.mp4",
+  t2: "transform-2.mp4",
+  t3: "transform-3.mp4"
 };
 
 // Hero video swap
 (function(){
   if(VIDEOS.hero){
     var hm=document.getElementById('heroMedia');
-    hm.innerHTML='<video autoplay muted loop playsinline><source src="'+VIDEOS.hero+'" type="video/mp4"></video>';
+    var list=Array.isArray(VIDEOS.hero)?VIDEOS.hero:[VIDEOS.hero];
+    if(list.length===1){
+      hm.innerHTML='<video autoplay muted loop playsinline><source src="'+list[0]+'" type="video/mp4"></video>';
+      return;
+    }
+    hm.innerHTML='';
+    var vids=list.map(function(src,i){
+      var v=document.createElement('video');
+      v.muted=true; v.playsInline=true; v.setAttribute('playsinline',''); v.preload='auto';
+      v.style.transition='opacity 1s ease'; v.style.opacity=(i===0?'1':'0');
+      v.innerHTML='<source src="'+src+'" type="video/mp4">';
+      hm.appendChild(v); return v;
+    });
+    vids.forEach(function(v,i){
+      v.addEventListener('ended',function(){
+        var n=vids[(i+1)%vids.length];
+        n.currentTime=0;
+        n.play().catch(function(){});
+        n.style.opacity='1'; v.style.opacity='0';
+      });
+    });
+    vids[0].play().catch(function(){});
+    // resume the active video if the browser paused it (hidden/occluded tab)
+    document.addEventListener('visibilitychange',function(){
+      if(!document.hidden){
+        var a=vids.filter(function(v){return v.style.opacity==='1';})[0];
+        if(a&&a.paused){ if(a.ended){a.dispatchEvent(new Event('ended'));} else {a.play().catch(function(){});} }
+      }
+    });
   } else {
     // photo slider
     var slides=document.querySelectorAll('.hero-slide'); var i=0;
@@ -512,7 +543,8 @@ document.querySelectorAll('.zz-media[data-vid]').forEach(function(m){
   var k=m.getAttribute('data-vid');
   if(VIDEOS[k]){
     var ph=m.querySelector('.zz-ph'); if(ph) ph.remove();
-    var v=document.createElement('video'); v.muted=true; v.loop=true; v.playsInline=true; v.setAttribute('playsinline','');
+    var v=document.createElement('video'); v.muted=true; v.loop=true; v.playsInline=true; v.setAttribute('playsinline',''); v.preload='metadata';
+    v.addEventListener('loadedmetadata',function(){ if(v.videoHeight>v.videoWidth) m.classList.add('portrait'); });
     v.innerHTML='<source src="'+VIDEOS[k]+'" type="video/mp4">'; m.appendChild(v);
     var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){v.play().catch(function(){});} else {v.pause();} });},{threshold:.4});
     io.observe(v);
