@@ -22,8 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Stage only the built page and its videos
-        run: mkdir _site && cp index.html _site/ && cp -r media _site/
+      - name: Check the committed full site is there
+        run: test -f _site/index.html && test -f _site/services/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

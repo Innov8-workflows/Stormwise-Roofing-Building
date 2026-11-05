@@ -8,3 +8,8 @@
 !index.html
 !media/
 !media/*.mp4
+
+# Full site (site-buildout, 2026-11-05): the generated output only. generate.js, build-*.js,
+# content/, site.config.js and _source/ stay local.
+!_site/
+!_site/**
