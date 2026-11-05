@@ -1,8 +1,10 @@
-/*
+# Whitelist: only the built page, its video files and the deploy workflow are published.
+# build.js, site.config.js, _src, _raw and DEMO-HANDOFF.md stay local
+# (the site-security gate flags them as S1 if they are served or public).
+*
 !.gitignore
+!.github/
+!.github/**
 !index.html
-!hero-1.mp4
-!hero-2.mp4
-!transform-1.mp4
-!transform-2.mp4
-!transform-3.mp4
+!media/
+!media/*.mp4
