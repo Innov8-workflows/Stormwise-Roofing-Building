@@ -231,8 +231,9 @@ header.nav{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:
 .hero-award{margin-bottom:22px}
 .hero-title{margin:0 auto;line-height:0}
 .hero-logo{display:block;margin:0 auto;width:min(var(--hero-logo-w,620px),86vw);aspect-ratio:var(--hero-logo-ratio,3/1);background:center/contain no-repeat;filter:drop-shadow(0 6px 22px rgba(0,0,0,.55))}
-.hero-tag{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#fff;font-size:clamp(1.15rem,2.6vw,1.6rem);margin-top:22px;line-height:1.2}
+.hero-tag{display:block;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#fff;font-size:clamp(1.15rem,2.6vw,1.6rem);margin-top:22px;line-height:1.2}
 .hero-tag em{font-style:normal;color:var(--brand-lt)}
+.hero-slogan{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--on-ink-2);font-size:clamp(.78rem,1.4vw,.92rem);margin:10px 0 0}
 .hero p.sub{color:var(--on-ink-2);font-size:clamp(1.02rem,2.2vw,1.18rem);margin:14px auto 32px;max-width:54ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 
@@ -610,8 +611,8 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
   <div class="hero-content">
     <div class="wrap">
 
-      <h1 class="hero-title"><span class="hero-logo" style="background-image:var(--a-logo-webp);--hero-logo-ratio:675/446" role="img" aria-label="Stormwise Roofing and Building, roofers in Lancaster"></span></h1>
-      <p class="hero-tag">Smart <em>Roofing.</em> Stronger <em>Homes.</em></p>
+      <h1 class="hero-title"><span class="hero-logo" style="background-image:var(--a-logo-webp);--hero-logo-ratio:675/446" role="img" aria-label="Stormwise Roofing and Building"></span><span class="hero-tag"><em>Roofers</em> in <em>Lancaster</em></span></h1>
+      <p class="hero-slogan">Smart Roofing. Stronger Homes.</p>
       <p class="sub">New roofs, roof repairs, flat roofs, fascias and guttering and storm damage across Lancaster, Lancashire and Cumbria, done properly the first time.</p>
       <div class="hero-actions">
         <a class="btn btn-brand" href="#contact">
@@ -657,7 +658,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
   <div class="wrap">
     <div class="svc-grid">
       <article class="svc-photo">
-        <div class="svc-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/svc1.webp')" role="img" aria-label="A red tiled hipped roof with a new flat roof over the bay"></div>
+        <div class="svc-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/new-roofs-red-tiled-hipped-6.webp')" role="img" aria-label="A red tiled hipped roof with a new flat roof over the bay"></div>
         <div class="svc-body">
           <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
           <h3>New Roofs and Re-Roofs</h3>
@@ -666,7 +667,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
         </div>
       </article>
       <article class="svc-photo">
-        <div class="svc-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/svc2.webp')" role="img" aria-label="Illustration: a chimney stack being repointed with fresh mortar"></div>
+        <div class="svc-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/roof-repairs-illustration-chimney-repointing-1.webp')" role="img" aria-label="Illustration: a chimney stack being repointed with fresh mortar"></div>
         <div class="svc-body">
           <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg></div>
           <h3>Roof Repairs</h3>
@@ -675,7 +676,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
         </div>
       </article>
       <article class="svc-photo">
-        <div class="svc-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/svc3.webp')" role="img" aria-label="Illustration: a new rubber flat roof with a roof lantern"></div>
+        <div class="svc-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/flat-roofs-illustration-lantern-2.webp')" role="img" aria-label="Illustration: a new rubber flat roof with a roof lantern"></div>
         <div class="svc-body">
           <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg></div>
           <h3>Flat Roofs</h3>
@@ -684,7 +685,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
         </div>
       </article>
       <article class="svc-photo">
-        <div class="svc-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/svc4.webp')" role="img" aria-label="A new tiled extension roof with black fascias and guttering at the eaves"></div>
+        <div class="svc-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/fascias-soffits-gutters-black-eaves-1.webp')" role="img" aria-label="A new tiled extension roof with black fascias and guttering at the eaves"></div>
         <div class="svc-body">
           <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M16 14v6"/><path d="M8 14v6"/><path d="M12 16v6"/></svg></div>
           <h3>Fascias, Soffits and Gutters</h3>
@@ -693,7 +694,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
         </div>
       </article>
       <article class="svc-photo">
-        <div class="svc-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/svc5.webp')" role="img" aria-label="Broken and slipped slates beside a chimney stack"></div>
+        <div class="svc-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/storm-damage-broken-slates-chimney-1.webp')" role="img" aria-label="Broken and slipped slates beside a chimney stack"></div>
         <div class="svc-body">
           <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973"/><path d="m13 12-3 5h4l-3 5"/></svg></div>
           <h3>Storm Damage</h3>
@@ -702,7 +703,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
         </div>
       </article>
       <article class="svc-photo">
-        <div class="svc-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/svc6.webp')" role="img" aria-label="Illustration: a tiled roof half cleared of moss"></div>
+        <div class="svc-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/repointing-roof-cleaning-illustration-1.webp')" role="img" aria-label="Illustration: a tiled roof half cleared of moss"></div>
         <div class="svc-body">
           <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 9v6"/><path d="M16 15v6"/><path d="M16 3v6"/><path d="M3 15h18"/><path d="M3 9h18"/><path d="M8 15v6"/><path d="M8 3v6"/></svg></div>
           <h3>Repointing and Roof Cleaning</h3>
@@ -727,8 +728,8 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
       <article class="case case--slider case--wide">
         <div class="case-media">
           <div class="case-frame ba-slider" id="baSlider" style="--pos:50%">
-            <img class="ba-after" src="/Stormwise-Roofing-Building/assets/home/t3_after.webp" alt="The same roof re-covered in new slate, with new lead flashing at the chimney" loading="lazy" draggable="false">
-            <div class="ba-before"><img src="/Stormwise-Roofing-Building/assets/home/t3_before.webp" alt="A worn slate roof with broken and missing slates beside the chimney" loading="lazy" draggable="false"></div>
+            <img class="ba-after" src="/Stormwise-Roofing-Building/assets/home/new-roofs-slate-after-1.webp" alt="The same roof re-covered in new slate, with new lead flashing at the chimney" loading="lazy" draggable="false">
+            <div class="ba-before"><img src="/Stormwise-Roofing-Building/assets/home/new-roofs-worn-slate-before-1.webp" alt="A worn slate roof with broken and missing slates beside the chimney" loading="lazy" draggable="false"></div>
             <span class="ba-tag ba-tag-b">Before</span>
             <span class="ba-tag ba-tag-a">After</span>
             <div class="ba-line" aria-hidden="true"><span class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></div>
@@ -761,8 +762,8 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
       <article class="case case--slider case--wide">
         <div class="case-media">
           <div class="case-frame ba-slider" id="baSlider3" style="--pos:50%">
-            <img class="ba-after" src="/Stormwise-Roofing-Building/assets/home/ba-after.png" alt="After photo to come" loading="lazy" draggable="false">
-            <div class="ba-before"><img src="/Stormwise-Roofing-Building/assets/home/ba-before.png" alt="Before photo to come" loading="lazy" draggable="false"></div>
+            <img class="ba-after" src="/Stormwise-Roofing-Building/assets/home/before-and-after-photo-to-come-after-1.webp" alt="After photo to come" loading="lazy" draggable="false">
+            <div class="ba-before"><img src="/Stormwise-Roofing-Building/assets/home/before-and-after-photo-to-come-before-1.webp" alt="Before photo to come" loading="lazy" draggable="false"></div>
             <span class="ba-tag ba-tag-b">Before</span>
             <span class="ba-tag ba-tag-a">After</span>
             <div class="ba-line" aria-hidden="true"><span class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></div>
@@ -790,13 +791,13 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
   </div>
   <div class="wrap">
     <div class="gal-grid" id="galGrid">
-      <div class="gal-item t-big"><img src="/Stormwise-Roofing-Building/assets/home/g1.webp" alt="An aerial view of a re-roofed bungalow with a conservatory and garden" loading="lazy"><span class="gal-cap">Bungalow Re-Roof</span></div>
-      <div class="gal-item"><img src="/Stormwise-Roofing-Building/assets/home/g2.webp" alt="A grey tiled extension roof with a roof window" loading="lazy"><span class="gal-cap">Extension Roof</span></div>
-      <div class="gal-item"><img src="/Stormwise-Roofing-Building/assets/home/g3.webp" alt="A new slate roof running down to the eaves" loading="lazy"><span class="gal-cap">Slate Re-Roof</span></div>
-      <div class="gal-item t-wide"><img src="/Stormwise-Roofing-Building/assets/home/g4.webp" alt="A newly tiled hipped roof with a brick chimney" loading="lazy"><span class="gal-cap">Hipped Roof Re-Tile</span></div>
-      <div class="gal-item t-wide"><img src="/Stormwise-Roofing-Building/assets/home/g5.webp" alt="A red tiled hipped roof with roof windows" loading="lazy"><span class="gal-cap">Red Tile Re-Roof</span></div>
-      <div class="gal-item t-wide t-last"><img src="/Stormwise-Roofing-Building/assets/home/g6.webp" alt="A tiled valley and roof windows on a new roof" loading="lazy"><span class="gal-cap">Valley and Roof Windows</span></div>
-      <div class="gal-item" hidden><img src="/Stormwise-Roofing-Building/assets/home/g7.webp" alt="A roof stripped back to new battens beside the chimney" loading="lazy"><span class="gal-cap">Stripped Back to the Battens</span></div>
+      <div class="gal-item t-big"><img src="/Stormwise-Roofing-Building/assets/home/new-roofs-aerial-bungalow-conservatory-1.webp" alt="An aerial view of a re-roofed bungalow with a conservatory and garden" loading="lazy"><span class="gal-cap">Bungalow Re-Roof</span></div>
+      <div class="gal-item"><img src="/Stormwise-Roofing-Building/assets/home/new-roofs-grey-tile-extension-1.webp" alt="A grey tiled extension roof with a roof window" loading="lazy"><span class="gal-cap">Extension Roof</span></div>
+      <div class="gal-item"><img src="/Stormwise-Roofing-Building/assets/home/new-roofs-slate-eaves-1.webp" alt="A new slate roof running down to the eaves" loading="lazy"><span class="gal-cap">Slate Re-Roof</span></div>
+      <div class="gal-item t-wide"><img src="/Stormwise-Roofing-Building/assets/home/new-roofs-hipped-chimney-1.webp" alt="A newly tiled hipped roof with a brick chimney" loading="lazy"><span class="gal-cap">Hipped Roof Re-Tile</span></div>
+      <div class="gal-item t-wide"><img src="/Stormwise-Roofing-Building/assets/home/new-roofs-red-tiled-hipped-4.webp" alt="A red tiled hipped roof with roof windows" loading="lazy"><span class="gal-cap">Red Tile Re-Roof</span></div>
+      <div class="gal-item t-wide t-last"><img src="/Stormwise-Roofing-Building/assets/home/new-roofs-valley-windows-1.webp" alt="A tiled valley and roof windows on a new roof" loading="lazy"><span class="gal-cap">Valley and Roof Windows</span></div>
+      <div class="gal-item" hidden><img src="/Stormwise-Roofing-Building/assets/home/new-roofs-stripped-battens-during-1.webp" alt="A roof stripped back to new battens beside the chimney" loading="lazy"><span class="gal-cap">Stripped Back to the Battens</span></div>
     </div>
     <div class="see-all"><a class="btn btn-outline" href="our-work/" id="workOpen">See All Our Work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
     <div class="gal-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg><span id="galCount">9</span> project photographs</div>
@@ -804,7 +805,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
 </section>
 
 <section class="why pad" id="why">
-  <div class="why-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/why-bg.webp')" role="img" aria-label="A hipped tiled roof at sunset"></div>
+  <div class="why-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/new-roofs-hipped-sunset-1.webp')" role="img" aria-label="A hipped tiled roof at sunset"></div>
   <div class="why-scrim"></div>
   <div class="wrap why-grid">
     <div>
@@ -835,7 +836,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
       </ul>
       <a class="btn btn-brand why-cta" href="#contact">Speak to Our Team <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
-    <div class="why-photo"><img src="/Stormwise-Roofing-Building/assets/home/why.webp" alt="The Stormwise Roofing and Building van" loading="lazy"></div>
+    <div class="why-photo"><img src="/Stormwise-Roofing-Building/assets/home/roofing-van-2.webp" alt="The Stormwise Roofing and Building van" loading="lazy"></div>
   </div>
 </section>
 
@@ -861,8 +862,8 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
 <section class="about pad" id="about">
   <div class="wrap about-grid">
     <div class="about-photo">
-      <img src="/Stormwise-Roofing-Building/assets/home/about1.webp" alt="A newly tiled hipped roof with roof windows" loading="lazy">
-      <div class="about-inset"><img src="/Stormwise-Roofing-Building/assets/home/about2.webp" alt="New lead flashing around a chimney on a slate roof" loading="lazy"></div>
+      <img src="/Stormwise-Roofing-Building/assets/home/new-roofs-windows-hip-1.webp" alt="A newly tiled hipped roof with roof windows" loading="lazy">
+      <div class="about-inset"><img src="/Stormwise-Roofing-Building/assets/home/roof-repairs-chimney-lead-flashing-1.webp" alt="New lead flashing around a chimney on a slate roof" loading="lazy"></div>
     </div>
     <div>
       <span class="eyebrow">About Us</span>
@@ -876,7 +877,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
 </section>
 
 <section class="areas pad" id="areas">
-  <div class="areas-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/areas.webp')" role="img" aria-label="An aerial view over a re-roofed bungalow and the street"></div>
+  <div class="areas-bg" style="background-image:url('/Stormwise-Roofing-Building/assets/home/new-roofs-aerial-street-1.webp')" role="img" aria-label="An aerial view over a re-roofed bungalow and the street"></div>
   <div class="areas-scrim"></div>
   <div class="wrap area-wrap">
     <div>
@@ -967,7 +968,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
   </div>
 </section>
 
-<section class="final-cta" style="background-image:url('/Stormwise-Roofing-Building/assets/home/cta.webp')">
+<section class="final-cta" style="background-image:url('/Stormwise-Roofing-Building/assets/home/new-roofs-red-tiled-hipped-3.webp')">
   <div class="wrap">
     <h2>Need a Roofer You Can Rely On?</h2>
     <p>Get a free, no-obligation quote from a trusted local team. Call today or send a quick message.</p>

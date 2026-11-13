@@ -213,8 +213,9 @@ header.nav{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:
 .hero-award{margin-bottom:22px}
 .hero-title{margin:0 auto;line-height:0}
 .hero-logo{display:block;margin:0 auto;width:min(var(--hero-logo-w,620px),86vw);aspect-ratio:var(--hero-logo-ratio,3/1);background:center/contain no-repeat;filter:drop-shadow(0 6px 22px rgba(0,0,0,.55))}
-.hero-tag{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#fff;font-size:clamp(1.15rem,2.6vw,1.6rem);margin-top:22px;line-height:1.2}
+.hero-tag{display:block;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#fff;font-size:clamp(1.15rem,2.6vw,1.6rem);margin-top:22px;line-height:1.2}
 .hero-tag em{font-style:normal;color:var(--brand-lt)}
+.hero-slogan{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--on-ink-2);font-size:clamp(.78rem,1.4vw,.92rem);margin:10px 0 0}
 .hero p.sub{color:var(--on-ink-2);font-size:clamp(1.02rem,2.2vw,1.18rem);margin:14px auto 32px;max-width:54ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 
