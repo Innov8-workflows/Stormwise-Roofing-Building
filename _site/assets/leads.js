@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  var LEAD_URL = '';
+  var LEAD_URL = 'https://script.google.com/macros/s/AKfycbzUvW1VJ1EUm15J7-lkv6eox7P9uzLLPuvVIlE1J7BrL0KJ_rMQb8YuqyRj2q7xPdrP/exec';
   if (LEAD_URL.indexOf('https://script.google.com/macros/s/') !== 0) return;
 
   
